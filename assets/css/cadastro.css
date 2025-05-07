@@ -1,0 +1,217 @@
+@keyframes fadeInUp {
+    0% {
+        opacity: 0;
+        transform: translateY(40px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeInLeft {
+    0% {
+        opacity: 0;
+        transform: translateX(-30px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes fadeInRight {
+    0% {
+        opacity: 0;
+        transform: translateX(30px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes pulseLogo {
+    0%, 100% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.05);
+    }
+}
+
+@keyframes bounceIn {
+    0% {
+        opacity: 0;
+        transform: scale(0.8);
+    }
+    60% {
+        opacity: 1;
+        transform: scale(1.05);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    background: linear-gradient(to bottom, #00030D, #00081D);
+    animation: fadeInUp 1.2s ease;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    animation: fadeInLeft 1.5s ease;
+}
+
+.nav-left img {
+    max-height: 90px;
+    animation: pulseLogo 3s infinite;
+}
+
+.button-nav {
+    background-color: #32cd32;
+    color: black;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 25px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.3s;
+    text-decoration: none;
+    animation: fadeInRight 1.5s ease;
+}
+
+.button-nav:hover {
+    background-color: #28a428;
+    transform: scale(1.05);
+}
+
+form {
+    background: linear-gradient(135deg, #1b422b 0%, #1e914e 75%, #183d28 100%);
+    padding: 40px;
+    border-radius: 15px;
+    width: 100%;
+    max-width: 400px;
+    margin: 50px auto;
+    text-align: center;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    animation: bounceIn 1.3s ease;
+}
+
+form label {
+    text-align: left;
+    font-size: 16px;
+    margin-bottom: -8px;
+    animation: fadeInUp 1.4s ease;
+}
+
+form input {
+    padding: 10px;
+    border: none;
+    border-radius: 8px;
+    font-size: 14px;
+    color: gray;
+    background-color: white;
+    transition: box-shadow 0.3s;
+    animation: fadeInUp 1.6s ease;
+}
+
+form input:focus {
+    box-shadow: 0 0 5px #00ff88;
+    outline: none;
+}
+
+form button[type="submit"] {
+    background-color: #2ca126;
+    color: #000;
+    border: none;
+    padding: 12px;
+    font-size: 16px;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.3s;
+    animation: fadeInUp 1.8s ease;
+}
+
+form button[type="submit"]:hover {
+    background-color: #268820;
+    transform: scale(1.05);
+}
+
+.options-login {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    color: white;
+    animation: fadeInUp 2s ease;
+}
+
+.text-options {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    gap: 10px;
+    font-weight: bold;
+}
+
+.text-options hr {
+    flex-grow: 1;
+    border: none;
+    border-top: 1px solid white;
+}
+
+.logos-options {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    margin-top: 10px;
+}
+
+.logos-options img {
+    background-color: white;
+    border-radius: 50%;
+    padding: 10px;
+    width: 40px;
+    height: 40px;
+    object-fit: contain;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s;
+    cursor: pointer;
+    animation: fadeInUp 2.2s ease;
+}
+
+.logos-options img:hover {
+    transform: scale(1.15);
+}
+
+.options-login a {
+    color: white;
+    animation: fadeInUp 2.4s ease;
+    text-decoration: none;
+}
+
+.options-login .sign-account {
+    color: #00ff88;
+    cursor: pointer;
+    transition: color 0.3s;
+}
+
+.options-login .sign-account:hover {
+    color: #00e67a;
+}
