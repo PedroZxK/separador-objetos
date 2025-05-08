@@ -216,3 +216,7 @@ form button[type="submit"]:hover {
 .options-login .sign-account:hover {
     color: #00e67a;
 }
+
+.nav-right a {
+    color: white;
+}

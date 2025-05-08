@@ -51,6 +51,7 @@ $mysqli->close();
     <title>Cadastro - StellarCode</title>
     <link rel="stylesheet" href="assets/css/cadastro.css">
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <link rel="shortcut icon" type="imagex/png" href="assets/img/logo.png">
 </head>
 
 <body>

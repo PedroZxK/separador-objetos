@@ -144,72 +144,65 @@ nav {
 
 .profile-container {
     display: flex;
-    justify-content: center;
+    border-radius: 10px;
+    padding: 20px;
+    margin: 20px auto;
+    max-width: 600px;
+    gap: 20px;
     align-items: center;
-    gap: 30px;
-    margin-top: 30px;
 }
 
 .profile-left {
     display: flex;
-    flex-direction: column;
     align-items: center;
-    animation: fadeInLeft 1s ease;
 }
 
-.profile-img {
+.profile-img-container {
+    position: relative;
     width: 120px;
     height: 120px;
     border-radius: 50%;
-    background-color: white;
-    padding: 10px;
-    transition: transform 0.3s ease;
+    overflow: hidden;
+    margin-bottom: 15px;
+    border: 3px solid #fff;
 }
 
-.profile-img:hover {
-    transform: scale(1.1);
+.profile-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: opacity 0.3s ease;
 }
 
-.divider {
-    width: 2px;
-    height: 220px;
-    background-color: #ccc;
-    animation: fadeInRight 1s ease;
-}
-
-.profile-right {
-    display: flex;
-    flex-direction: column;
-    gap: 15px;
-    align-items: flex-start;
-    animation: fadeInRight 1.5s ease;
-}
-
-.profile-input {
-    width: 300px;
-    padding: 10px;
-    border-radius: 20px;
-    border: none;
-    background-color: white;
-    color: #333;
-    transition: border-color 0.3s ease, box-shadow 0.3s ease;
-}
-
-.profile-input:focus {
-    border-color: #00ff88;
-    box-shadow: 0 0 8px rgba(0, 255, 136, 0.6);
+.profile-img-container:hover .profile-img {
+    opacity: 0.7; /* Escurece a imagem ao passar o mouse */
 }
 
 .edit-icon {
-    width: 14px;
-    margin-left: 8px;
-    cursor: pointer;
-    transition: transform 0.3s ease;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%); /* Centraliza o ícone */
+    visibility: hidden; /* Inicialmente escondido */
+    transition: visibility 0.3s ease, opacity 0.3s ease;
 }
 
-.edit-icon:hover {
-    transform: scale(1.2);
+.profile-img-container:hover .edit-icon {
+    visibility: visible; /* Mostra o ícone de lápis ao passar o mouse */
+    opacity: 1;
 }
+
+.edit-photo-icon {
+    width: 25px; /* Tamanho ajustado do ícone */
+    height: 25px;
+    cursor: pointer;
+}
+
+
+#foto-input {
+    display: none;
+}
+
 
 .logout-button {
     margin-top: 20px;
@@ -312,4 +305,140 @@ footer {
 .logout-link:hover .logout-img {
     transform: scale(1.1);
     opacity: 0.8;
+}
+
+.profile-img-container {
+    position: relative;
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    overflow: hidden;
+    margin-bottom: 20px;
+}
+
+.profile-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.edit-photo-icon {
+    position: absolute;
+    bottom: 5px;
+    right: 5px;
+    background-color: rgba(0, 0, 0, 0.6);
+    color: white;
+    border-radius: 50%;
+    padding: 5px;
+    cursor: pointer;
+    width: 25px;
+    height: 25px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.edit-photo-icon img {
+    width: 14px;
+    height: 14px;
+}
+
+#foto-input {
+    display: none;
+}
+
+.divider {
+    width: 1px;
+    height: 180px;
+    background-color: #fff;
+    opacity: 0.5;
+}
+
+.profile-right {
+    display: flex;
+    flex-direction: row;
+    gap: 15px;
+    width: 100%;
+}
+
+.profile-fields label {
+    display: flex;
+    align-items: center;
+    color: #fff;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+.profile-fields label img {
+    width: 16px;
+    margin-left: 8px;
+    cursor: pointer;
+    opacity: 0.8;
+    transition: opacity 0.3s ease;
+}
+
+.profile-fields label img:hover {
+    opacity: 1;
+}
+
+.profile-input {
+    padding: 10px 15px;
+    border: none;
+    border-radius: 20px;
+    background-color: #fff;
+    color: #333;
+    font-size: 16px;
+    width: 100%;
+    margin-bottom: 15px;
+    box-sizing: border-box;
+}
+
+.profile-input[readonly] {
+    background-color: #eee;
+    color: #777;
+    cursor: not-allowed;
+}
+
+.senha-section {
+    display: flex;
+    justify-content: space-between;
+    align-items: left;
+    flex-direction: column;
+}
+
+.senha-section label {
+    color: #fff;
+    font-weight: bold;
+}
+
+.alterar-senha-btn {
+    background-color: #28a745;
+    color: white;
+    border: none;
+    border-radius: 20px;
+    padding: 10px 20px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+
+.alterar-senha-btn:hover {
+    background-color: #218838;
+}
+
+.save-button {
+    background-color: #28a745;
+    color: white;
+    border: none;
+    border-radius: 20px;
+    padding: 12px 25px;
+    cursor: pointer;
+    font-weight: bold;
+    font-size: 16px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+    margin-top: 20px;
+}
+
+.save-button:hover {
+    background-color: #218838;
 }

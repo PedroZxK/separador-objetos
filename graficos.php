@@ -69,6 +69,7 @@ $mysqli->close();
     <title>Gráficos - StellarCode</title>
     <link rel="stylesheet" href="assets/css/graficos.css">
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <link rel="shortcut icon" type="imagex/png" href="assets/img/logo.png">
 </head>
 
 <body>
@@ -124,9 +125,9 @@ $mysqli->close();
     <footer>
         <div class="footer-middle">
             <div class="logo-footer">
-                <img src="assets/img/linkedin.png" alt="Linkedin">
-                <img src="assets/img/instagram.png" alt="Instagram">
-                <img src="assets/img/email.png" alt="Email">
+                <a href="https://linkedin.com"><img src="assets/img/linkedin.png" alt="Linkedin"></a>
+                <a href="https://instagram.com"><img src="assets/img/instagram.png" alt="Instagram"></a>
+                <a href="https://gmail.com"><img src="assets/img/email.png" alt="Email"></a>
             </div>
             <p>Todos os direitos reservados</p>
         </div>
@@ -135,25 +136,24 @@ $mysqli->close();
     <script>
         document.getElementById('salvar-anotacoes').addEventListener('click', function() {
             const anotacoes = document.getElementById('anotacoes').value;
-            // Use fetch para enviar as anotações para o servidor
             fetch('salvar_anotacoes.php', {
-                method: 'POST',
-                headers: {
-                    'Content-Type': 'application/x-www-form-urlencoded',
-                },
-                body: 'anotacoes=' + encodeURIComponent(anotacoes),
-            })
-            .then(response => {
-                if (response.ok) {
-                    alert('Anotações salvas com sucesso!');
-                } else {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/x-www-form-urlencoded',
+                    },
+                    body: 'anotacoes=' + encodeURIComponent(anotacoes),
+                })
+                .then(response => {
+                    if (response.ok) {
+                        alert('Anotações salvas com sucesso!');
+                    } else {
+                        alert('Erro ao salvar anotações.');
+                    }
+                })
+                .catch(error => {
+                    console.error('Erro:', error);
                     alert('Erro ao salvar anotações.');
-                }
-            })
-            .catch(error => {
-                console.error('Erro:', error);
-                alert('Erro ao salvar anotações.');
-            });
+                });
         });
     </script>
 </body>

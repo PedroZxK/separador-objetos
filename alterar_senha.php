@@ -6,6 +6,7 @@
     <title>Alterar Senha</title>
     <link rel="stylesheet" href="assets/css/perfil.css">
     <link rel="stylesheet" href="assets/css/alterar_senha.css">
+    <link rel="shortcut icon" type="imagex/png" href="assets/img/logo.png">
 </head>
 
 <body>

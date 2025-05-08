@@ -13,6 +13,7 @@ include 'validacao.php';
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Home - StellarCode</title>
     <link rel="stylesheet" href="assets/css/home.css">
+    <link rel="shortcut icon" type="imagex/png" href="assets/img/logo.png">
 </head>
 
 <body>
@@ -47,9 +48,9 @@ include 'validacao.php';
     <footer>
         <div class="footer-middle">
             <div class="logo-footer">
-                <img src="assets/img/linkedin.png" alt="Linkedin">
-                <img src="assets/img/instagram.png" alt="Instagram">
-                <img src="assets/img/email.png" alt="Email">
+                <a href="https://linkedin.com"><img src="assets/img/linkedin.png" alt="Linkedin"></a>
+                <a href="https://instagram.com"><img src="assets/img/instagram.png" alt="Instagram"></a>
+                <a href="https://gmail.com"><img src="assets/img/email.png" alt="Email"></a>
             </div>
             <p>Todos os direitos reservados</p>
         </div>

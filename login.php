@@ -47,6 +47,7 @@ $mysqli->close();
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Login - StellarCode</title>
     <link rel="stylesheet" href="assets/css/login.css">
+    <link rel="shortcut icon" type="imagex/png" href="assets/img/logo.png">
 </head>
 
 <body>
