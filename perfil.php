@@ -66,12 +66,12 @@ if ($result_foto && $result_foto->num_rows > 0) {
                     <div class="divider"></div>
                     <div class="profile-fields">
                         <label for="email">Endereço de Email:
-                            <img src="assets/img/lapis.png" alt="Editar" class="edit-icon" onclick="editarCampo('email')">
+                            <img src="assets/img/lapis.png" alt="Editar" class="edit-icons  " onclick="editarCampo('email')">
                         </label>
                         <input type="text" id="email" name="email" value="<?php echo htmlspecialchars($email); ?>" readonly class="profile-input">
 
                         <label for="nome">Nome:
-                            <img src="assets/img/lapis.png" alt="Editar" class="edit-icon" onclick="editarCampo('nome')">
+                            <img src="assets/img/lapis.png" alt="Editar" class="edit-icons" onclick="editarCampo('nome')">
                         </label>
                         <input type="text" id="nome" name="nome" value="<?php echo htmlspecialchars($nome); ?>" readonly class="profile-input">
 

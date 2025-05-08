@@ -175,25 +175,25 @@ nav {
 }
 
 .profile-img-container:hover .profile-img {
-    opacity: 0.7; /* Escurece a imagem ao passar o mouse */
+    opacity: 0.7;
 }
 
 .edit-icon {
     position: absolute;
     top: 50%;
     left: 50%;
-    transform: translate(-50%, -50%); /* Centraliza o ícone */
-    visibility: hidden; /* Inicialmente escondido */
+    transform: translate(-50%, -50%);
+    visibility: hidden;
     transition: visibility 0.3s ease, opacity 0.3s ease;
 }
 
 .profile-img-container:hover .edit-icon {
-    visibility: visible; /* Mostra o ícone de lápis ao passar o mouse */
+    visibility: visible;
     opacity: 1;
 }
 
 .edit-photo-icon {
-    width: 25px; /* Tamanho ajustado do ícone */
+    width: 25px;
     height: 25px;
     cursor: pointer;
 }
@@ -261,23 +261,7 @@ footer {
 }
 
 .save-button,
-.back-button {
-    padding: 10px 20px;
-    background-color: #28a745;
-    color: white;
-    border: none;
-    border-radius: 20px;
-    cursor: pointer;
-    font-weight: bold;
-    transition: background-color 0.3s ease, transform 0.3s ease;
-}
-
-.save-button:hover,
-.back-button:hover {
-    background-color: #218838;
-    transform: scale(1.05);
-}
-
+.back-button,
 .alterar-senha-btn {
     padding: 10px 20px;
     background-color: #28a745;
@@ -289,6 +273,8 @@ footer {
     transition: background-color 0.3s ease, transform 0.3s ease;
 }
 
+.save-button:hover,
+.back-button:hover,
 .alterar-senha-btn:hover {
     background-color: #218838;
     transform: scale(1.05);
@@ -324,8 +310,8 @@ footer {
 
 .edit-photo-icon {
     position: absolute;
-    bottom: 5px;
-    right: 5px;
+    bottom: -10px;
+    left: -12px;
     background-color: rgba(0, 0, 0, 0.6);
     color: white;
     border-radius: 50%;
@@ -339,8 +325,8 @@ footer {
 }
 
 .edit-photo-icon img {
-    width: 14px;
-    height: 14px;
+    width: 20px;
+    height: 20px;
 }
 
 #foto-input {
@@ -409,21 +395,6 @@ footer {
 .senha-section label {
     color: #fff;
     font-weight: bold;
-}
-
-.alterar-senha-btn {
-    background-color: #28a745;
-    color: white;
-    border: none;
-    border-radius: 20px;
-    padding: 10px 20px;
-    cursor: pointer;
-    font-weight: bold;
-    transition: background-color 0.3s ease;
-}
-
-.alterar-senha-btn:hover {
-    background-color: #218838;
 }
 
 .save-button {

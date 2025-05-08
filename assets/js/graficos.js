@@ -148,35 +148,44 @@ const graficoTamanhos = new Chart(ctxTamanhos, {
 });
 
 const ctxCombinacao = document.getElementById('graficoCombinacao').getContext('2d');
-const labelsCombinacao = [...new Set(combinacoes.map(item => item.cor))];
+const coresCombinacao = [...new Set(combinacoes.map(item => item.cor))];
 const materiaisCombinacao = [...new Set(combinacoes.map(item => item.material))];
-const coresMaterial = {
-    'metal': 'rgba(0, 128, 0, 0.8)', 
-    'plástico': 'rgba(54, 162, 235, 0.8)'
-};
 
-const datasetsCombinacao = materiaisCombinacao.map(material => {
-    return {
-        label: material,
-        data: labelsCombinacao.map(corLabel => {
-            const item = combinacoes.find(c => c.cor === corLabel && c.material === material);
-            return item ? item.quantidade : 0;
-        }),
-        backgroundColor: coresMaterial[material.toLowerCase()] || 'rgba(128, 128, 128, 0.8)'
-    };
+// Criando um mapeamento numérico para cores e materiais
+const corParaNumero = {};
+coresCombinacao.forEach((cor, index) => {
+    corParaNumero[cor] = index;
 });
 
+const materialParaNumero = {};
+materiaisCombinacao.forEach((material, index) => {
+    materialParaNumero[material] = index;
+});
+
+// Preparando os dados para o gráfico de dispersão
+const dataCombinacaoDispersao = combinacoes.map(item => ({
+    x: corParaNumero[item.cor],
+    y: materialParaNumero[item.material],
+    r: item.quantidade * 5 // O raio do ponto será proporcional à quantidade
+}));
+
 const graficoCombinacao = new Chart(ctxCombinacao, {
-    type: 'bar',
+    type: 'scatter',
     data: {
-        labels: labelsCombinacao,
-        datasets: datasetsCombinacao
+        datasets: [{
+            label: 'Combinações de Cor e Material',
+            data: dataCombinacaoDispersao,
+            backgroundColor: 'rgba(102, 166, 54, 0.8)',
+            pointRadius: dataCombinacaoDispersao.map(d => d.r),
+            pointHoverRadius: dataCombinacaoDispersao.map(d => d.r + 2)
+        }]
     },
     options: {
         responsive: true,
         scales: {
-            y: {
-                beginAtZero: true,
+            x: {
+                type: 'category',
+                labels: coresCombinacao,
                 ticks: {
                     color: '#f0f0f0'
                 },
@@ -184,7 +193,9 @@ const graficoCombinacao = new Chart(ctxCombinacao, {
                     color: 'rgba(255, 255, 255, 0.1)'
                 }
             },
-            x: {
+            y: {
+                type: 'category',
+                labels: materiaisCombinacao,
                 ticks: {
                     color: '#f0f0f0'
                 },
@@ -194,15 +205,24 @@ const graficoCombinacao = new Chart(ctxCombinacao, {
             }
         },
         plugins: {
+            tooltip: {
+                callbacks: {
+                    label: function(context) {
+                        const dataPoint = context.dataset.data[context.dataIndex];
+                        const cor = coresCombinacao[dataPoint.x];
+                        const material = materiaisCombinacao[dataPoint.y];
+                        const quantidade = combinacoes.find(c => c.cor === cor && c.material === material)?.quantidade || 0;
+                        return `Cor: ${cor}, Material: ${material}, Quantidade: ${quantidade}`;
+                    }
+                }
+            },
             title: {
                 display: true,
-                text: 'Quantidade de Produtos por Cor e Material',
+                text: 'Distribuição de Produtos por Cor e Material',
                 color: '#f0f0f0'
             },
             legend: {
-                labels: {
-                    color: '#f0f0f0'
-                }
+                display: false
             }
         }
     }
