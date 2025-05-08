@@ -3,6 +3,7 @@
         opacity: 0;
         transform: translateY(40px);
     }
+
     100% {
         opacity: 1;
         transform: translateY(0);
@@ -14,6 +15,7 @@
         opacity: 0;
         transform: translateX(-30px);
     }
+
     100% {
         opacity: 1;
         transform: translateX(0);
@@ -25,6 +27,7 @@
         opacity: 0;
         transform: translateX(30px);
     }
+
     100% {
         opacity: 1;
         transform: translateX(0);
@@ -32,9 +35,12 @@
 }
 
 @keyframes pulseLogo {
-    0%, 100% {
+
+    0%,
+    100% {
         transform: scale(1);
     }
+
     50% {
         transform: scale(1.05);
     }
@@ -45,10 +51,12 @@
         opacity: 0;
         transform: scale(0.8);
     }
+
     60% {
         opacity: 1;
         transform: scale(1.05);
     }
+
     100% {
         transform: scale(1);
     }
@@ -126,7 +134,7 @@ form input {
     border: none;
     border-radius: 8px;
     font-size: 14px;
-    color: gray;
+    color: black;
     background-color: white;
     transition: box-shadow 0.3s;
     animation: fadeInUp 1.6s ease;
@@ -139,7 +147,7 @@ form input:focus {
 
 form button[type="submit"] {
     background-color: #2ca126;
-    color: #000;
+    color: white;
     border: none;
     padding: 12px;
     font-size: 16px;
@@ -191,4 +199,8 @@ form button[type="submit"]:hover {
 
 .options-login .sign-account:hover {
     color: #00e67a;
+}
+
+.nav-right a {
+    color: white;
 }

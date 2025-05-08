@@ -71,7 +71,6 @@ body {
     animation: fadeInUp 1.2s ease;
 }
 
-/* NAV CENTRALIZADA NO TOPO */
 nav {
     width: 100%;
     display: flex;
@@ -80,7 +79,7 @@ nav {
     top: 0;
     left: 0;
     padding: 20px 0;
-    background-color: transparent; /* ou coloque uma cor, se quiser */
+    background-color: transparent;
     z-index: 10;
 }
 
@@ -91,25 +90,22 @@ nav {
 
 .nav-middle a {
     text-decoration: none;
-    color: #fff; /* ajuste conforme seu layout */
+    color: #fff;
     font-size: 18px;
 }
 
-/* PRESENTATION - LOGO À ESQUERDA E BOTÕES À DIREITA */
 .presentation-stellar {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 120px 60vh 50px; /* padding-top maior para não sobrepor a nav */
+    padding: 120px 60vh 50px;
 }
 
-/* LADO ESQUERDO COM LOGO GRANDE */
 .presentation-left img {
-    width: 50vh; /* ajuste o tamanho conforme desejar */
+    width: 50vh;
     max-width: 100%;
 }
 
-/* LADO DIREITO COM BOTÕES EMPILHADOS */
 .presentation-right {
     display: flex;
     flex-direction: column;
@@ -118,7 +114,7 @@ nav {
 
 .button-presentation {
     padding: 15px 25px;
-    background-color: #35B52D; /* ajuste a cor */
+    background-color: #35B52D;
     color: white;
     text-decoration: none;
     font-size: 18px;
@@ -131,7 +127,6 @@ nav {
     background-color: #2a8b23;
 }
 
-/* CONTENT MIDDLE - TEXTO À ESQUERDA E IMAGEM À DIREITA */
 .content-middle {
     display: flex;
     justify-content: space-between;
@@ -140,7 +135,6 @@ nav {
     gap: 50px;
 }
 
-/* LADO ESQUERDO - TEXTO */
 .content-left {
     flex: 1;
 }
@@ -149,16 +143,15 @@ nav {
     font-size: 24px;
     font-weight: bold;
     margin-bottom: 20px;
-    color: white; /* ou branco, dependendo do fundo */
+    color: white;
 }
 
 .content-left p {
     font-size: 16px;
     line-height: 1.6;
-    color: white; /* ajuste conforme necessário */
+    color: white;
 }
 
-/* LADO DIREITO - IMAGEM */
 .content-right {
     flex: 1;
     display: flex;
@@ -170,7 +163,6 @@ nav {
     height: auto;
 }
 
-/* CONTENT TEAM - TEXTO E IMAGENS DOS MEMBROS */
 .content-team {
     margin: 80px auto;
     padding: 40px;
@@ -262,22 +254,18 @@ footer {
     font-size: 16px;
 }
 
-/* NAV CENTRALIZADA */
 nav {
     animation: fadeInLeft 1.5s ease;
 }
 
-/* LOGO COM PULSAÇÃO */
 .presentation-left img {
     animation: pulseLogo 3s infinite;
 }
 
-/* BOTÕES COM ENTRADA LENTA */
 .presentation-right {
     animation: fadeInRight 1.3s ease;
 }
 
-/* SEÇÃO DE CONTEÚDO: TEXTO E IMAGEM */
 .content-left {
     animation: fadeInLeft 1.5s ease;
 }
@@ -286,12 +274,10 @@ nav {
     animation: fadeInRight 1.5s ease;
 }
 
-/* BLOCO DE EQUIPE */
 .content-team {
     animation: bounceIn 1.4s ease;
 }
 
-/* CADA MEMBRO INDIVIDUAL - DIFERENÇA DE TEMPO SUGERIDA */
 .member-team:nth-child(1) {
     animation: fadeInUp 1.2s ease;
 }
@@ -299,7 +285,6 @@ nav {
     animation: fadeInUp 1.4s ease;
 }
 
-/* RODAPÉ */
 footer {
     animation: fadeInUp 1.6s ease;
 }

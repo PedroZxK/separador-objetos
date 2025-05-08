@@ -5,52 +5,7 @@
     <meta charset="UTF-8">
     <title>Alterar Senha</title>
     <link rel="stylesheet" href="assets/css/perfil.css">
-    <style>
-        form {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            gap: 15px;
-            max-width: 400px;
-            margin: 0 auto;
-        }
-
-        .input-wrapper {
-            position: relative;
-            width: 100%;
-        }
-
-        .profile-input {
-            width: 100%;
-            padding: 10px 40px 10px 10px;
-            font-size: 16px;
-            box-sizing: border-box;
-        }
-
-        .eye-icon {
-            position: absolute;
-            right: 10px;
-            top: 50%;
-            transform: translateY(-50%);
-            cursor: pointer;
-            width: 24px;
-            height: 24px;
-        }
-
-        .save-button {
-            padding: 10px 20px;
-            font-size: 16px;
-            width: 100%;
-            cursor: pointer;
-        }
-
-        .profile-area {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            margin-top: 50px;
-        }
-    </style>
+    <link rel="stylesheet" href="assets/css/alterar_senha.css">
 </head>
 
 <body>

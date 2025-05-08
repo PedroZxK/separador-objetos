@@ -9,13 +9,11 @@ $idUsuario = $_SESSION['email'];
 $fotoBinario = null;
 $temNovaFoto = false;
 
-// Se o usuário enviou uma nova imagem
 if (isset($_FILES['foto']) && $_FILES['foto']['error'] === UPLOAD_ERR_OK) {
     $fotoBinario = file_get_contents($_FILES['foto']['tmp_name']);
     $temNovaFoto = true;
 }
 
-// Atualização no banco
 if ($temNovaFoto) {
     $sql = "UPDATE usuarios SET name=?, email=?, foto=? WHERE email=?";
     $stmt = $mysqli->prepare($sql);
