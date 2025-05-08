@@ -65,6 +65,7 @@ body {
     height: 100vh;
     background: linear-gradient(to bottom, #00030D, #00081D);
     animation: fadeInUp 1.2s ease;
+    overflow: hidden;
 }
 
 nav {

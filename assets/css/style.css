@@ -1,3 +1,63 @@
+html {
+    scroll-behavior: smooth;
+}
+
+@keyframes fadeInUp {
+    0% {
+        opacity: 0;
+        transform: translateY(40px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeInLeft {
+    0% {
+        opacity: 0;
+        transform: translateX(-30px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes fadeInRight {
+    0% {
+        opacity: 0;
+        transform: translateX(30px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes pulseLogo {
+    0%, 100% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.05);
+    }
+}
+
+@keyframes bounceIn {
+    0% {
+        opacity: 0;
+        transform: scale(0.8);
+    }
+    60% {
+        opacity: 1;
+        transform: scale(1.05);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
 * {
     box-sizing: border-box;
 }
@@ -6,7 +66,240 @@ body {
     font-family: 'Arial', sans-serif;
     margin: 0;
     padding: 0;
-    height: 100vh;
+    height: 100%;
     background: linear-gradient(to bottom, #00030D, #00081D);
     animation: fadeInUp 1.2s ease;
+}
+
+/* NAV CENTRALIZADA NO TOPO */
+nav {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    position: absolute;
+    top: 0;
+    left: 0;
+    padding: 20px 0;
+    background-color: transparent; /* ou coloque uma cor, se quiser */
+    z-index: 10;
+}
+
+.nav-middle {
+    display: flex;
+    gap: 30px;
+}
+
+.nav-middle a {
+    text-decoration: none;
+    color: #fff; /* ajuste conforme seu layout */
+    font-size: 18px;
+}
+
+/* PRESENTATION - LOGO À ESQUERDA E BOTÕES À DIREITA */
+.presentation-stellar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 120px 60vh 50px; /* padding-top maior para não sobrepor a nav */
+}
+
+/* LADO ESQUERDO COM LOGO GRANDE */
+.presentation-left img {
+    width: 50vh; /* ajuste o tamanho conforme desejar */
+    max-width: 100%;
+}
+
+/* LADO DIREITO COM BOTÕES EMPILHADOS */
+.presentation-right {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.button-presentation {
+    padding: 15px 25px;
+    background-color: #35B52D; /* ajuste a cor */
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+    border-radius: 8px;
+    text-align: center;
+    transition: background-color 0.3s;
+}
+
+.button-presentation:hover {
+    background-color: #2a8b23;
+}
+
+/* CONTENT MIDDLE - TEXTO À ESQUERDA E IMAGEM À DIREITA */
+.content-middle {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 80px 50px;
+    gap: 50px;
+}
+
+/* LADO ESQUERDO - TEXTO */
+.content-left {
+    flex: 1;
+}
+
+.content-left h5 {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 20px;
+    color: white; /* ou branco, dependendo do fundo */
+}
+
+.content-left p {
+    font-size: 16px;
+    line-height: 1.6;
+    color: white; /* ajuste conforme necessário */
+}
+
+/* LADO DIREITO - IMAGEM */
+.content-right {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+}
+
+.content-right img {
+    max-width: 100%;
+    height: auto;
+}
+
+/* CONTENT TEAM - TEXTO E IMAGENS DOS MEMBROS */
+.content-team {
+    margin: 80px auto;
+    padding: 40px;
+    max-width: 900px;
+    background: linear-gradient(135deg, #1b422b 0%, #1e914e 75%, #183d28 100%);
+    border-radius: 20px;
+    display: flex;
+    justify-content: center;
+    gap: 50px;
+    flex-wrap: wrap;
+    text-align: center;
+ }
+
+ .member-team {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 200px;
+    color: white;
+ }
+
+
+ .member-team p {
+    font-weight: bold;
+    margin-bottom: 10px;
+ }
+
+ .social-icons {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+ }
+
+ .social-icons img {
+    width: 28px;
+    height: 28px;
+    object-fit: contain;
+    cursor: pointer;
+    transition: transform 0.2s ease;
+}
+
+ .social-icons img:hover {
+    transform: scale(1.1);
+ }
+
+ .profile-img {
+    width: 20vh;
+    height: 20vh;
+    object-fit: cover;
+    border-radius: 50%;
+    margin-bottom: 10px;
+}
+
+footer {
+    text-align: center;
+    padding: 25px 10px;
+}
+
+.footer-middle {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+}
+
+.logo-footer {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+}
+
+.logo-footer img {
+    width: 30px;
+    height: 30px;
+    background-color: #2ca126;
+    border-radius: 25%;
+    padding: 8px;
+    object-fit: contain;
+    box-sizing: content-box;
+    transition: transform 0.3s ease;
+}
+
+.logo-footer img:hover {
+    transform: scale(1.1);
+}
+
+.footer-middle p {
+    color: #cccccc;
+    font-size: 16px;
+}
+
+/* NAV CENTRALIZADA */
+nav {
+    animation: fadeInLeft 1.5s ease;
+}
+
+/* LOGO COM PULSAÇÃO */
+.presentation-left img {
+    animation: pulseLogo 3s infinite;
+}
+
+/* BOTÕES COM ENTRADA LENTA */
+.presentation-right {
+    animation: fadeInRight 1.3s ease;
+}
+
+/* SEÇÃO DE CONTEÚDO: TEXTO E IMAGEM */
+.content-left {
+    animation: fadeInLeft 1.5s ease;
+}
+
+.content-right {
+    animation: fadeInRight 1.5s ease;
+}
+
+/* BLOCO DE EQUIPE */
+.content-team {
+    animation: bounceIn 1.4s ease;
+}
+
+/* CADA MEMBRO INDIVIDUAL - DIFERENÇA DE TEMPO SUGERIDA */
+.member-team:nth-child(1) {
+    animation: fadeInUp 1.2s ease;
+}
+.member-team:nth-child(2) {
+    animation: fadeInUp 1.4s ease;
+}
+
+/* RODAPÉ */
+footer {
+    animation: fadeInUp 1.6s ease;
 }

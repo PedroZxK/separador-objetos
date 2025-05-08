@@ -75,6 +75,7 @@ body {
     min-height: 100vh;
     display: flex;
     flex-direction: column;
+    overflow: hidden;
 }
 
 nav {
@@ -225,7 +226,7 @@ footer {
     width: 30px;
     height: 30px;
     background-color: #2ca126;
-    border-radius: 50%;
+    border-radius: 25%;
     padding: 8px;
     object-fit: contain;
     box-sizing: content-box;
@@ -279,4 +280,17 @@ footer {
 
 .logo-footer img {
     animation: fadeInUp 2s ease;
+}
+
+.logout-link {
+    display: inline-block;
+}
+
+.logout-img {
+    transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+.logout-link:hover .logout-img {
+    transform: scale(1.1);
+    opacity: 0.8;
 }

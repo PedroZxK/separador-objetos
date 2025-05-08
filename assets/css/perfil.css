@@ -1,0 +1,315 @@
+@keyframes fadeInUp {
+    0% {
+        opacity: 0;
+        transform: translateY(40px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeInLeft {
+    0% {
+        opacity: 0;
+        transform: translateX(-30px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes fadeInRight {
+    0% {
+        opacity: 0;
+        transform: translateX(30px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes pulseLogo {
+
+    0%,
+    100% {
+        transform: scale(1);
+    }
+
+    50% {
+        transform: scale(1.05);
+    }
+}
+
+@keyframes bounceIn {
+    0% {
+        opacity: 0;
+        transform: scale(0.8);
+    }
+
+    60% {
+        opacity: 1;
+        transform: scale(1.05);
+    }
+
+    100% {
+        transform: scale(1);
+    }
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background: linear-gradient(to bottom, #00030D, #00081D);
+    color: white;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    animation: fadeInUp 1.2s ease;
+    overflow: hidden;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 40px;
+    animation: fadeInLeft 1.5s ease;
+}
+
+.nav-left img {
+    max-height: 80px;
+    animation: pulseLogo 3s infinite;
+}
+
+.nav-middle {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    gap: 2rem;
+}
+
+.nav-middle {
+    display: flex;
+    gap: 30px;
+}
+
+.nav-middle a {
+    text-decoration: none;
+    color: white;
+    font-weight: 500;
+    transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.nav-middle a:hover {
+    transform: scale(1.15);
+    color: #00ff88;
+}
+
+.main-content {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 40px 20px;
+    animation: fadeInUp 1.5s ease;
+}
+
+.profile-area {
+    background: linear-gradient(135deg, #1b422b, #1e914e, #183d28);
+    padding: 50px 40px;
+    border-radius: 20px;
+    width: 100%;
+    max-width: 700px;
+    min-height: 450px;
+    text-align: center;
+    box-shadow: 0 0 20px #1a3d2f;
+    animation: bounceIn 1.3s ease;
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    animation-delay: 0.3s;
+}
+
+.profile-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+    margin-top: 30px;
+}
+
+.profile-left {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    animation: fadeInLeft 1s ease;
+}
+
+.profile-img {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    background-color: white;
+    padding: 10px;
+    transition: transform 0.3s ease;
+}
+
+.profile-img:hover {
+    transform: scale(1.1);
+}
+
+.divider {
+    width: 2px;
+    height: 220px;
+    background-color: #ccc;
+    animation: fadeInRight 1s ease;
+}
+
+.profile-right {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    align-items: flex-start;
+    animation: fadeInRight 1.5s ease;
+}
+
+.profile-input {
+    width: 300px;
+    padding: 10px;
+    border-radius: 20px;
+    border: none;
+    background-color: white;
+    color: #333;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.profile-input:focus {
+    border-color: #00ff88;
+    box-shadow: 0 0 8px rgba(0, 255, 136, 0.6);
+}
+
+.edit-icon {
+    width: 14px;
+    margin-left: 8px;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+
+.edit-icon:hover {
+    transform: scale(1.2);
+}
+
+.logout-button {
+    margin-top: 20px;
+    padding: 10px 30px;
+    border: none;
+    border-radius: 20px;
+    background-color: #2ecc71;
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.logout-button:hover {
+    background-color: #27ae60;
+    transform: scale(1.05);
+}
+
+footer {
+    text-align: center;
+    padding: 25px 10px;
+    animation: fadeInUp 1.8s ease;
+}
+
+.footer-middle {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+}
+
+.logo-footer {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+}
+
+.logo-footer img {
+    width: 30px;
+    height: 30px;
+    background-color: #2ca126;
+    border-radius: 25%;
+    padding: 8px;
+    object-fit: contain;
+    box-sizing: content-box;
+    transition: transform 0.3s ease;
+}
+
+.logo-footer img:hover {
+    transform: scale(1.1);
+}
+
+.footer-middle p {
+    color: #cccccc;
+    font-size: 16px;
+}
+
+.save-button,
+.back-button {
+    padding: 10px 20px;
+    background-color: #28a745;
+    color: white;
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.save-button:hover,
+.back-button:hover {
+    background-color: #218838;
+    transform: scale(1.05);
+}
+
+.alterar-senha-btn {
+    padding: 10px 20px;
+    background-color: #28a745;
+    color: white;
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.alterar-senha-btn:hover {
+    background-color: #218838;
+    transform: scale(1.05);
+}
+
+.logout-link {
+    display: inline-block;
+}
+
+.logout-img {
+    transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+.logout-link:hover .logout-img {
+    transform: scale(1.1);
+    opacity: 0.8;
+}

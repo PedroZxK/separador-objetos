@@ -1,3 +1,10 @@
+<?php
+
+include 'conexao.php';
+include 'validacao.php';
+
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -14,12 +21,14 @@
             <img src="assets/img/logo.png" alt="Logo StellarCode">
         </div>
         <div class="nav-middle">
-            <a href="#">Gráficos</a>
-            <a href="#">Página Inicial</a>
-            <a href="#">Perfil</a>
+            <a href="graficos.php">Gráficos</a>
+            <a href="home.php">Página Inicial</a>
+            <a href="perfil.php">Perfil</a>
         </div>
         <div class="nav-right">
-            <img src="assets/img/logout.png" alt="Sair">
+            <a href="logout.php" class="logout-link">
+                <img src="assets/img/logout.png" alt="Sair" class="logout-img">
+            </a>
         </div>
     </nav>
 
