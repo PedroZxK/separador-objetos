@@ -19,7 +19,7 @@
     </nav>
 
     <form action="" method="POST">
-        <h1>Faça o seu Registro</h1>
+        <h1>Faça o seu Cadastro</h1>
 
         <label for="email">Email:</label>
         <input type="email" name="email" placeholder="Insira o seu Email" required>
@@ -38,11 +38,6 @@
                 <p>Outras opções</p>
                 <hr>
             </div>
-            <div class="logos-options">
-                <img src="assets/img/google.png" alt="Google">
-                <img src="assets/img/facebook.png" alt="Facebook">
-            </div>
-
             <a href="login.php">Já tem uma conta?<span class="sign-account"> Fazer Login</span></a>
         </div>
     </form>

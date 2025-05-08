@@ -1,0 +1,153 @@
+body {
+    font-family: sans-serif;
+    margin: 0;
+    background-color: #121826; /* Dark background */
+    color: #ffffff; /* Light text */
+    display: flex;
+    min-height: 100vh;
+}
+
+.sidebar {
+    background-color: #1e293b; /* Darker sidebar */
+    color: #cbd5e1; /* Lighter text in sidebar */
+    width: 250px;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.logo {
+    font-size: 2em;
+    font-weight: bold;
+    color: #86efac; /* Green accent color */
+    margin-bottom: 30px;
+}
+
+.sidebar nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    width: 100%;
+}
+
+.sidebar nav ul li a {
+    display: block;
+    padding: 10px 15px;
+    text-decoration: none;
+    color: #cbd5e1;
+    margin-bottom: 5px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.sidebar nav ul li a:hover {
+    background-color: #334155; /* Slightly lighter hover */
+    color: #f0f9ff;
+}
+
+.logout {
+    margin-top: auto;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.logout a {
+    text-decoration: none;
+    color: #cbd5e1;
+}
+
+.logout button {
+    background: none;
+    border: none;
+    color: #cbd5e1;
+    cursor: pointer;
+}
+
+.content {
+    flex-grow: 1;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+}
+
+header {
+    /* Styling for the header if needed */
+    margin-bottom: 20px;
+}
+
+main {
+    flex-grow: 1;
+}
+
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+}
+
+.grid-item {
+    background-color: #1e293b;
+    border-radius: 8px;
+    padding: 20px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    color: #f0f9ff;
+}
+
+.chart-pie, .chart-bar, .chart-line, .gauge-chart {
+    /* Styles for the chart containers */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 200px; /* Adjust as needed */
+}
+
+.notes {
+    grid-column: 1 / -1; /* Span across all columns */
+    display: flex;
+    flex-direction: column;
+}
+
+.notes-header {
+    font-weight: bold;
+    margin-bottom: 10px;
+    color: #86efac;
+}
+
+.notes-body {
+    background-color: #334155;
+    border-radius: 5px;
+    padding: 15px;
+    color: #f0f9ff;
+    min-height: 150px; /* Adjust as needed */
+}
+
+footer {
+    padding-top: 20px;
+    text-align: center;
+    color: #cbd5e1;
+}
+
+.social-icons {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-bottom: 10px;
+}
+
+.social-icons a {
+    color: #86efac;
+    font-size: 1.5em;
+    text-decoration: none;
+}
+
+.social-icons svg {
+    width: 24px;
+    height: 24px;
+    fill: #86efac;
+}
+
+.copyright {
+    font-size: 0.8em;
+}
